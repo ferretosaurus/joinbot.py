@@ -18,11 +18,5 @@ async def on_member_join(member):
     channel = member.server.get_channel("411967511387570176")
     await bot.send_message(channel, fmt.format(member))
 
-@bot.event
-async def on_member_remove(member):
-    fmt = '{0.mention} has left'
-    channel = member.server.get_channel("411967511387570176")
-    await bot.send_message(channel, fmt.format(member))
-
 
 bot.run(os.environ["TOKEN"])
