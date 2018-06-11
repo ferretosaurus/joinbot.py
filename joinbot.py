@@ -14,7 +14,7 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member):
-    fmt = 'Welcome, {0.mention}, enjoy the server and read #rules'
+    fmt = 'Welcome, {0.mention}, enjoy the server and read the rules'
     channel = member.server.get_channel("455798975451234304")
     await bot.send_message(channel, fmt.format(member))
 
